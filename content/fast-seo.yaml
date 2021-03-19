@@ -1,0 +1,39 @@
+title_separator: "|"
+name_formula: '{{ site_name ?? app:name }}'
+title_formula: '{{ meta_title ?? title }}{{unless ignore_site_name}} {{ title_separator }} {{ site_name ?? app:name }}{{/unless}}'
+description_formula: '{{ meta_description ?? content | strip_tags | safe_truncate:155:... }}'
+ignore_site_name: false
+canonical_formula: '{{ canonical_url ?? permalink }}'
+og_image_formula: |-
+  {{ if og_image }}
+  	{{ og_image }}
+          <meta property="og:image" content="{{ permalink }}" />
+          <meta property="og:image:width" content="{{ width }}" />
+          <meta property="og:image:height" content="{{ height }}" />
+          <meta property="og:image:alt" content="{{ alt }}" />
+      {{ /og_image }}
+  {{ elseif default_og_image }}
+  	{{ default_og_image }}
+          <meta property="og:image" content="{{ permalink }}" />
+          <meta property="og:image:width" content="{{ width }}" />
+          <meta property="og:image:height" content="{{ height }}" />
+          <meta property="og:image:alt" content="{{ alt }}" />
+      {{ /default_og_image }}
+  {{ /if }}
+twitter_image_formula: |-
+  {{ if og_image }}
+  	{{ og_image }}
+          <meta name="twitter:image" content="{{ permalink }}" />
+          <meta name="twitter:image:width" content="{{ width }}" />
+          <meta property="twitter:image:height" content="{{ height }}" />
+          <meta property="twitter:image:alt" content="{{ alt }}" />
+      {{ /og_image }}
+  {{ elseif default_og_image }}
+  	{{ default_og_image }}
+          <meta name="twitter:image" content="{{ permalink }}" />
+          <meta name="twitter:image:width" content="{{ width }}" />
+          <meta property="twitter:image:height" content="{{ height }}" />
+          <meta property="twitter:image:alt" content="{{ alt }}" />
+      {{ /default_og_image }}
+  {{ /if }}
+

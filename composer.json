@@ -1,0 +1,25 @@
+{
+    "name": "parfaitementweb/statamic-fast-seo",
+    "description": "Statamic addon to implement SEO tags. Fast.",
+    "authors": [
+        {
+            "name": "Alexis Serneels"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Parfaitementweb\\StatamicFastSeo\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Statamic Fast SEO",
+            "description": "Statamic addon to implement SEO tags. Fast."
+        },
+        "laravel": {
+            "providers": [
+                "Parfaitementweb\\StatamicFastSeo\\ServiceProvider"
+            ]
+        }
+    }
+}
