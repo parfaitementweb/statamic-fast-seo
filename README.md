@@ -39,13 +39,15 @@ We have made things easy for you to start. Here are the three steps your need to
 
 3. **Enjoy.**
 
-## What does your addon look like?
+## What does the addon look like?
 
-![Statamic Fast SEO](https://parfaitementweb.com/statamic/statamic-fast-seo/fieldtype-preview.png)
+![Statamic Fast SEO Dashboard](https://parfaitementweb.com/statamic/statamic-fast-seo/statamic-fast-seo-dashboard.png)
 
-![Statamic fast SEO](https://parfaitementweb.com/statamic/statamic-fast-seo/fieldtype-locale.png)
+![Statamic fast SEO General Settings](https://parfaitementweb.com/statamic/statamic-fast-seo/statamic-fast-seo-general-settings.png)
 
-![Statamic fast SEO](https://parfaitementweb.com/statamic/statamic-fast-seo/fieldtype-options.png)
+![Statamic fast SEO Page SEO](https://parfaitementweb.com/statamic/statamic-fast-seo/statamic-fast-seo-page-seo.png)
+
+![Statamic fast SEO Formulas](https://parfaitementweb.com/statamic/statamic-fast-seo/statamic-fast-seo-formulas.png)
 
 ## Changelog
 
