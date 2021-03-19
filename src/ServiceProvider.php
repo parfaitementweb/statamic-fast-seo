@@ -5,6 +5,7 @@ namespace Parfaitementweb\StatamicFastSeo;
 use Parfaitementweb\StatamicFastSeo\Tags\FastSeoTags;
 use Parfaitementweb\StatamicFastSeo\Subscribers\EventSubscriber;
 use Statamic\Facades\CP\Nav;
+use Statamic\Facades\File;
 use Statamic\Providers\AddonServiceProvider;
 
 class ServiceProvider extends AddonServiceProvider
@@ -26,6 +27,7 @@ class ServiceProvider extends AddonServiceProvider
         parent::boot();
 
         $this->createNavigation();
+        $this->copyInitialContent();
     }
 
     protected function createNavigation()
@@ -42,5 +44,14 @@ class ServiceProvider extends AddonServiceProvider
                         ->route('statamic-fast-seo.settings.index')
                 ]);
         });
+    }
+
+    protected function copyInitialContent()
+    {
+        $filename = 'fast-seo.yaml';
+
+        if (! File::exists(base_path('content/' . $filename))) {
+            File::copy(__DIR__ . '/../content/' . $filename, base_path('content/' . $filename));
+        }
     }
 }

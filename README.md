@@ -51,5 +51,8 @@ We have made things easy for you to start. Here are the three steps your need to
 
 ## Changelog
 
+**V1.0.1**  
+👍 Publish the initial values during install.
+
 **V1.0.0**  
 🚀 Launching this awesome addon to the world.
