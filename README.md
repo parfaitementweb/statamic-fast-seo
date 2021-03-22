@@ -51,8 +51,11 @@ We have made things easy for you to start. Here are the three steps your need to
 
 ## Changelog
 
-**V1.0.1**  
+**V1.0.3** 
+✂️ Trim the description and be perfectly sharp.
+
+**V1.0.2**  
 👍 Publish the initial values during install.
 
-**V1.0.0**  
+**V1.0.0** & **V1.0.1**
 🚀 Launching this awesome addon to the world.

@@ -1,7 +1,7 @@
 title_separator: "|"
 name_formula: '{{ site_name ?? app:name }}'
 title_formula: '{{ meta_title ?? title }}{{unless ignore_site_name}} {{ title_separator }} {{ site_name ?? app:name }}{{/unless}}'
-description_formula: '{{ meta_description ?? content | strip_tags | safe_truncate:155:... }}'
+description_formula: '{{ meta_description ?? content | strip_tags | entities | trim | safe_truncate:155:... }}'
 ignore_site_name: false
 canonical_formula: '{{ canonical_url ?? permalink }}'
 og_image_formula: |-
