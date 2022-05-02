@@ -237,7 +237,7 @@ class Settings
                                 'display' => __('statamic-fast-seo::cp.entry_blueprint.og_image.display'),
                                 'instructions' => __('statamic-fast-seo::cp.entry_blueprint.og_image.instructions'),
                                 'type' => 'assets',
-                                'container' => 'assets',
+                                'container' => $_ENV['FASTSEO_OG_IMAGE_CONTAINER'] ?? 'assets',
                                 'max_files' => 1,
                                 'width' => 100,
                                 'localizable' => true,
