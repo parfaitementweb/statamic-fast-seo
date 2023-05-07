@@ -244,7 +244,7 @@ class Settings
                             ],
                         ],
                         [
-                            'handle' => 'd',
+                            'handle' => 'noindex',
                             'field' => [
                                 'display' => __('statamic-fast-seo::cp.entry_blueprint.noindex.display'),
                                 'instructions' => __('statamic-fast-seo::cp.entry_blueprint.noindex.instructions'),
