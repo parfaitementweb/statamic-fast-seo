@@ -27,12 +27,12 @@ class FastSeoTags extends Tags
             'site_name' => $this->defaults['site_name']->value() ?? config('app.name'),
         ]);
 
-        return Parse::template($this->defaults['title_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['title_formula']->raw(), $this->context->toArray());
     }
 
     public function description()
     {
-        return Parse::template($this->defaults['description_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['description_formula']->raw(), $this->context->toArray());
     }
 
     public function name()
@@ -41,7 +41,7 @@ class FastSeoTags extends Tags
             'site_name' => $this->defaults['site_name']->value(),
         ]);
 
-        return Parse::template($this->defaults['name_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['name_formula']->raw(), $this->context->toArray());
     }
 
     public function ogImage()
@@ -50,7 +50,7 @@ class FastSeoTags extends Tags
             'default_og_image' => $this->defaults['default_og_image']->value(),
         ]);
 
-        return Parse::template($this->defaults['og_image_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['og_image_formula']->raw(), $this->context->toArray());
     }
 
     public function twitterHandle()
@@ -65,7 +65,7 @@ class FastSeoTags extends Tags
             'twitter_handle' => $this->defaults['twitter_handle']->value(),
         ]);
 
-        return Parse::template($this->defaults['twitter_image_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['twitter_image_formula']->raw(), $this->context->toArray());
     }
 
     public function robots()
@@ -129,7 +129,7 @@ class FastSeoTags extends Tags
 
     public function canonical()
     {
-        return Parse::template($this->defaults['canonical_formula']->raw(), $this->context);
+        return Parse::template($this->defaults['canonical_formula']->raw(), $this->context->toArray());
     }
 
     public function extra()
